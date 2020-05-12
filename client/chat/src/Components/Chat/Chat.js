@@ -17,7 +17,9 @@ const Chat = ({ location }) => {
 	const [ users, setUsers ] = useState('');
 	const [ message, setMessage ] = useState('');
 	const [ messages, setMessages ] = useState([]);
-	const ENDPOINT = 'https://real-time-messenger.herokuapp.com/';
+	const ENDPOINT = 'localhost:3000';
+
+	// const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
 
 	useEffect(
 		() => {
