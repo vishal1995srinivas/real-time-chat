@@ -1,5 +1,7 @@
-import React from 'react';
-import queryString from 'querystring';
+import React, { useState, useEffect } from 'react';
+import queryString from 'query-string';
+import io from 'socket.io-client';
+
 import './Chat.css';
 let socket;
 const Chat = () => {
@@ -12,7 +14,11 @@ const Chat = () => {
 			socket = io(ENDPOINT);
 			setName(name);
 			setRoom(room);
-			socket.emit('join', { name, room });
+			socket.emit('join', { name, room }, () => {});
+
+			return () => {
+				socket.emit('disconnect');
+			};
 		},
 		[ ENDPOINT, location.search ]
 	);
