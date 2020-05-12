@@ -25,6 +25,11 @@ io.on('connection', (socket) => {
 
 		socket.join(user.room);
 	});
+	socket.on('sendMessage', (message, callback) => {
+		io.to(user.room).emit('message', { user: user.name, text: message });
+
+		callback();
+	});
 	socket.on('disconnect', () => {
 		console.log('User has left');
 	});
