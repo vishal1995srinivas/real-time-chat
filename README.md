@@ -19,10 +19,7 @@
 <!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
-  <a href="https://github.com/vishal1995srinivas/real-time-chat">
-    <img src="logo.png" alt="Logo" >
-  </a>
+
 
   <h3 align="center">CHAT</h3>
 
