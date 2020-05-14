@@ -84,7 +84,7 @@ npm install npm@latest -g
 
 ### Installation
  
-1. Clone the SickFits
+1. Clone the App
 ```sh
 git clone https://github.com/vishal1995srinivas/real-time-chat.git
 ```
